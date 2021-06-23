@@ -91,3 +91,9 @@ body {
     margin-top: 7rem;
   }
 }
+
+/* 自作CSS
+-------------------------------------------------- */
+.bg-dark {
+  background-color: #492b0e!important;
+}
