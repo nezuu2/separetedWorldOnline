@@ -184,8 +184,60 @@
   <!-- FOOTER -->
   <footer class="container">
     <p class="float-end"><a href="#">ページのはじめに戻る</a></p>
-    <p>&copy; 2021 @nezuu2 with Team member. &middot; <a href="#">ゲームルール</a> &middot; <a href="#">プライバシーポリシー</a></p>
+    <p>&copy; 2021 @nezuu2 and Team member. &middot; <a href="https://discord.com/channels/836901574076268545/836948443243085885" data-bs-toggle="modal" data-bs-target="#gameModal">ゲームルール</a> &middot; <a href="#privacy" data-bs-toggle="modal" data-bs-target="#privacyModal">プライバシーポリシー</a></p>
     <p>使用したフレームワーク：Bootstrap<br>フレームワークの作者：Mark Otto, Jacob Thornton, と Bootstrapの貢献者</p>
+    
+    <!-- gameModal -->
+    <div class="modal fade" id="gameModal" tabindex="-1" aria-labelledby="gameModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="gameModalLabel">ゲームルール</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            最新のルールはこちらからご覧いただけます：<br>
+            (できるだけ最新のルールを御覧いただきたいです。)
+            <a href="https://discord.com/channels/836901574076268545/836948443243085885">https://discord.com/channels/836901574076268545/836948443243085885</a>
+            <p></p>
+            <img src="Images/ルールのスクショ.png" alt="ゲームルール">
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- privacyModal -->
+    <div class="modal fade" id="privacyModal" tabindex="-1" aria-labelledby="privacyModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="privacyModalLabel">プライバシーポリシー</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            以下本文に記載する「取得した情報」とは、ユーザー様からご入力いただいたメールアドレスやパスワードなどの情報のことを示します。
+            <br>----------------------------------------------------------------
+            <br>取得した情報は当ゲームまたはホームページのパフォーマンス向上と、
+            <br>ユーザー様が作成したアカウントのセキュリティ向上のために活用されます。
+            <br>
+            <br>そして私達開発チームは、いかなる理由があろうと取得した情報を
+            <br>悪用しないことをお約束いたします。
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">閉じる</button>
+            <button type="button" class="btn btn-primary" data-bs-dismiss="modal" onclick="success()">同意する</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Alert(javascript) -->
+    <script>
+      function success(){
+        alert("✔ プライバシーポリシーへの同意を確認しました");
+      }
+    </script>
   </footer>
 </main>
 
