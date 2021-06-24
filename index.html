@@ -88,32 +88,10 @@
         <div class="container">
           <div class="carousel-caption text-start">
             <h1>新感覚 RPG Minecraftサーバー｜Dragonk RPG!</h1>
-            <p>さあ、あなたもこの広大なワールドへ冒険に出かけよう！。</p>
-            <p><button type="button" class="btn btn-lg btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" role="button">サーバーに参加する</button></p>
-          </div>
-        </div>
-        <!-- Modal -->
-        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-          <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">サーバー情報</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-              </div>
-              <div class="modal-body">
-                この情報をもとにMinecraftでログインしてください。
-                <br>-----------------------------------------------
-                <br>IP：nezuu.f5.si:25567
-                <br>version：1.16.5
-                <br>
-                <br>※事前登録をすると特別なアイテムがもらえるので、
-                <br>よろしければアカウントを作成してください。
-                <br>(現在開発中の機能)
-              </div>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-              </div>
-            </div>
+            <p>さあ、あなたもこの広大なワールドへ冒険に出かけよう！。
+              <br>Dragonk RPG serverには、豊富なアイテム、武器、防具、イベント、ギミック、ボス、敵キャラがいます。
+            </p>
+            <p><button type="button" class="btn btn-lg btn-primary" data-bs-toggle="modal" data-bs-target="#serverModal" role="button">サーバーに参加する</button></p>
           </div>
         </div>
       </div>
@@ -124,7 +102,7 @@
           <div class="carousel-caption">
             <h1>今なら事前登録で、特別なアイテムが手に入ります！</h1>
             <p>今すぐ事前登録しよう！</p>
-            <p><a class="btn btn-lg btn-success" href="#" role="button">事前登録する</a></p>
+            <p><a class="btn btn-lg btn-success" href="#" data-bs-toggle="modal" data-bs-target="#preregistrationModal" role="button">事前登録する</a></p>
           </div>
         </div>
       </div>
@@ -135,7 +113,7 @@
           <div class="carousel-caption text-end">
             <h1>ラズパイで動く”軽い”サーバー！</h1>
             <p>他では味わえないラズパイでできた軽いサーバーです。<br>経費があまりかかってないので気にせずじゃんじゃんログインしちゃってください!</p>
-            <p><a class="btn btn-lg btn-primary" href="#" role="button">今すぐ遊ぶ！</a> <a class="btn btn-lg btn-outline-primary" href="#" role="button">開発者について知る</a></p>
+            <p><a class="btn btn-lg btn-primary" href="#" data-bs-toggle="modal" data-bs-target="#serverModal" role="button">今すぐ遊ぶ！</a> <a class="btn btn-lg btn-outline-primary" href="creator.html" role="button">開発者について知る</a></p>
           </div>
         </div>
       </div>
@@ -149,7 +127,51 @@
       <span class="visually-hidden">Next</span>
     </a>
   </div>
-
+  <!-- Modal -->
+  <div class="modal fade" id="serverModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">サーバー情報</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          この情報をもとにMinecraftでログインしてください。
+          <br>-----------------------------------------------
+          <br>IP：nezuu.f5.si:25567
+          <br>version：1.16.5
+          <br>
+          <br>※事前登録をすると特別なアイテムがもらえますので、
+          <br>よければアカウントを作成してください。
+          <br>(現在開発中の機能)
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Modal -->
+  <div class="modal fade" id="preregistrationModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">事前登録</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          準備中・・・
+          <!--
+            こちらのIPアドレスでサーバーにログインして、表示された番号を入力してください。
+            <br>
+          -->
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <!-- Marketing messaging and featurettes
   ================================================== -->
@@ -157,14 +179,32 @@
 
   <div class="container marketing">
 
-    <!-- START THE FEATURETTES -->
+    <div calss="row featurette">
+      <h2>ベータ版 公開中!｜完成まであと</h2>
+      <div class="progress">
+        <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 29%"></div>
+      </div>
+      <h4>現在２層までできています。</h4>
+    </div>
 
+    <!-- START THE FEATURETTES -->
     <hr class="featurette-divider">
 
     <div class="row featurette">
       <div class="col-md-7">
         <h2 class="featurette-heading">SAOをインスパイアしてつくった<br>世界があなたを待っている!。</h2>
-        <p class="lead">さあ広大なRPGの世界へあなたも出かけよう!。</p>
+        <p class="lead">さあ広大なRPGの世界へあなたも出かけよう!。
+          <br>
+          <br>Dragonk RPG serverには、豊富なアイテム、武器、防具、イベント、ギミック、
+          <br>ボス、敵キャラ、レアキャラなどがたくさんいます。
+          <br>
+          <br>オンラインゲームならではのイベント要素でいろんなプレイヤーさんとつながって楽しく遊ぼう!。
+          <br>
+          <br>ゲームの要素が足りなくなったらDiscordサーバーに言いに行こう!、
+          <br>すぐにアップデートしてもらえます!。 (無限の楽しみをあなたへ★)
+          <br>
+          <br>さあ！あなただけの遊び方をみつけに行こう!。 <a style="color:red">[ Let's PLAY the DRS! ]</a>
+        </p>
       </div>
       <div class="col-md-5">
         <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg>
@@ -177,7 +217,10 @@
     <div class="row featurette">
       <div class="col-md-7 order-md-2">
         <h2 class="featurette-heading">広大な世界とフィールド<br><span class="text-muted">A vast world and fields.</span></h2>
-        <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+        <p class="lead">あらゆるダンジョンや街があるこの世界を思う存分たのしもう!。
+          <br>建造物などを詰め込みに詰め込んだので、たくさんギミックや宝箱があります。
+          <br><a style="color:green">[WEBクエスト] マップ中を駆け回って探してみよう！</a>
+        </p>
       </div>
       <div class="col-md-5 order-md-1">
         <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg>
@@ -189,7 +232,7 @@
 
     <div class="row featurette">
       <div class="col-md-7">
-        <h2 class="featurette-heading">・広大なフィールド<br>・豊富な敵<br>・豊富な武器やアイテム<br>・豪華な報酬があなたを待っている！<br><span class="text-muted">さあ君も冒険へでかけよう!。</span></h2>
+        <h2 class="featurette-heading">見どころ満載!</h2>
         <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
       </div>
       <div class="col-md-5">
@@ -234,20 +277,18 @@
     </div>
     <!-- privacyModal -->
     <div class="modal fade" id="privacyModal" tabindex="-1" aria-labelledby="privacyModalLabel" aria-hidden="true">
-      <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
         <div class="modal-content">
           <div class="modal-header">
             <h5 class="modal-title" id="privacyModalLabel">プライバシーポリシー</h5>
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body">
-            以下本文に記載する「取得した情報」とは、ユーザー様からご入力いただいたメールアドレスやパスワードなどの情報のことを示します。
-            <br>----------------------------------------------------------------
-            <br>取得した情報は当ゲームまたはホームページのパフォーマンス向上と、
-            <br>ユーザー様が作成したアカウントのセキュリティ向上のために活用されます。
-            <br>
-            <br>そして私達開発チームは、いかなる理由があろうと取得した情報を
-            <br>悪用しないことをお約束いたします。
+            以下本文に記載する「取得した情報」とは、ユーザー様からご入力いただいた
+            <br>メールアドレスやパスワードなどの情報のことを示します。
+            <br>-----------------------------------------------------------------------------------------------------------
+            <br>取得した情報はアカウントのセキュリティ保護やゲームやホームページのパフォーマンス向上にお役立てさせていただき、
+            <br>それ以外での使用は連絡にて許可を頂いた場合をのぞいて一切致しません。
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">閉じる</button>
@@ -259,13 +300,14 @@
     <!-- Alert(javascript) -->
     <script>
       function success(){
-        alert("✔ プライバシーポリシーへの同意を確認しました");
+        alert("✔ プライバシーポリシーへの同意を確認しました\n🙇ご同意くださりありがとうございます。");
       }
     </script>
   </footer>
 </main>
 
+    <!--Bootstrap JS-->
     <script src="Library/bootstrap-5.0.0-beta1-dist/js/bootstrap.min.js"></script>
-      
+    
   </body>
 </html>
