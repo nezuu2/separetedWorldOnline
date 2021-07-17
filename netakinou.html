@@ -80,67 +80,103 @@
   <!-- Wrap the rest of the page in another container to center all the content. -->
 
   <div class="container marketing">
-
     <div class="row featurette">
       <div class="col-md-7">
+        <hr class="featurette-divider">
         <h2 class="featurette-heading">ネタ機能<span class="text-muted"> (Javascriptで動かしてます。)</span></h2>
       </div>
     </div>
     <hr class="featurette-divider">
 
-    <!--Javascriptのソース-->
-    <script>
-    
-    </script>
-
-    <h3>🎫RPGプロフィールエディタ(現在開発中のため機能しません)</h3>
+    <h3>🎫RPGプロフィールエディタ</h3>
       <p></p>
       <div class="form-floating mb-3">
-        <input type="search" class="form-control" id="floatingInput" placeholder="nezuu_drinkz">
-        <label for="floatingInput">あなたのプレイヤー名(MCID)</label>
-      </div>
-      <div class="form-floating mb-3">
-        <input type="search" class="form-control" id="floatingWork" placeholder="僧侶">
-        <label for="floatingPassword">職業</label>
-      </div>
-      <div class="form-floating mb-3">
-        <input type="search" class="form-control" id="floatingFavorite" placeholder="パソコン">
-        <label for="floatingPassword">好きなこと</label>
-      </div>
-      <div class="form-floating mb-3">
-        <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px"></textarea>
-        <label for="floatingTextarea2">獲得スキル (箇条書き推奨)</label>
+        <input type="text" class="form-control" id="floatingInput" placeholder="nezuu_drinkz">
+        <label for="floatingInput">🎫あなたのプレイヤー名(MCID)</label>
       </div>
       <div class="form-floating mb-3">
         <select class="form-select" id="floatingSelect" aria-label="Floating label select example">
           <option selected>選択してください</option>
-          <option value="0">なし! (丸腰)</option>
+          <option value="1">片手剣士 (One-handed swordsman)</option>
+          <option value="2">両手剣士 (Two-handed swordsman)</option>
+          <option value="3">弓矢使い (Archer)</option>
+          <option value="4">魔法使い (Wizard)</option>
+          <option value="5">武闘家 (Martial artist)</option>
+          <option value="0">無職 (without an occupation)</option>
+        </select>
+        <label for="floatingSelect">⚔職業</label>
+      </div>
+      <div class="form-floating mb-3">
+        <input type="text" class="form-control" id="floatingFavorite" placeholder="パソコン">
+        <label for="floatingInput">好きなこと</label>
+      </div>
+      <div class="col-md-3">
+      <label for="customRange2" class="form-label">🔷レベル1~100</label>
+      <input type="range" class="form-range" min="1" max="100" id="customRange2">
+      </div>
+      <div class="form-floating mb-3">
+        <textarea class="form-control" placeholder="" id="floatingTextarea2" style="height: 100px"></textarea>
+        <label for="floatingTextarea2">✨獲得スキル (箇条書き推奨)</label>
+      </div>
+      <div class="form-floating mb-3">
+        <select class="form-select" id="floatingSelect2" aria-label="Floating label select example">
+          <option selected>選択してください</option>
+          <option value="0">なし(丸腰)</option>
           <option value="1">革の装備</option>
           <option value="2">鉄の装備</option>
           <option value="3">金の装備</option>
           <option value="4">ダイヤモンドの装備</option>
           <option value="5">ひつじの毛</option>
         </select>
-        <label for="floatingSelect">装備一式</label>
+        <label for="floatingSelect">🦺装備一式</label>
       </div>
-      <button type="submit" class="btn btn-primary">完成!</button>
+      <div class="form-floating mb-3">
+        <select class="form-select" id="floatingSelect3" aria-label="Floating label select example">
+          <option selected>選択してください</option>
+          <option value="1">Minecraft風</option>
+          <option value="2">SAO風</option>
+          <option value="3">シンプル</option>
+          <option value="4">Twitter風</option>
+        </select>
+        <label for="floatingSelect">🎨プロフィールのデザイン</label>
+      </div>
+      <button type="button" class="btn btn-primary" onclick="showMessage()">作成!</button>
 
-     <hr class="featurette-divider">    
+     <hr class="featurette-divider">
   </div><!-- /.container -->
+
+  <!--Javascriptのソース-->
+  <script>
+    const showMessage = () => {
+      console.log("--")
+      const textbox = document.getElementById("floatingInput").value
+      console.log("MCID: " + textbox);
+      const textbox3 = document.getElementById("floatingSelect").value
+      console.log("職業: " + textbox3);
+      const textbox2 = document.getElementById("floatingFavorite").value
+      console.log("好きなこと: " + textbox2);
+      const textbox4 = document.getElementById("customRange2").value
+      console.log("レベル: " + textbox4);
+      const textbox5 = document.getElementById("floatingTextarea2").value
+      console.log("スキル: " + textbox5);
+      const textbox6 = document.getElementById("floatingSelect2").value
+      console.log("装備: " + textbox6);
+      const textbox7 = document.getElementById("floatingSelect3").value
+      console.log("デザイン: " + textbox7);
+    }
+  </script>
 
   <!-- FOOTER -->
   <footer class="container">
-    <p class="float-end"><a href="#">ページのはじめに戻る</a></p>
+    <p class="float-end"><a href="#">⇧ページのはじめに戻る</a></p>
     <p>&copy; 2021 @nezuu2 with Team member. &middot; <a href="#">ルール</a> &middot; <a href="#">プライバシーポリシー</a></p>
     <p>使用したフレームワーク：Bootstrap<br>フレームワークの作者：Mark Otto, Jacob Thornton, と Bootstrapの貢献者</p>
   </footer>
 </main>
-
     <!--Bootstrap JS-->
     <script src="Library/bootstrap-5.0.0-beta1-dist/js/bootstrap.min.js"></script>
     <!--jQuery JS-->
     <script src="Library/jquery-3.6.0.min.js"></script>
     <script src="main.js"></script>
-
   </body>
 </html>
