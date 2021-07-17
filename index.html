@@ -264,7 +264,7 @@
   <!-- FOOTER -->
   <footer class="container">
     <p class="float-end"><a href="#">ページのはじめに戻る</a></p>
-    <p>&copy; 2021 @nezuu2 and Team member. &middot; <a href="#" data-bs-toggle="modal" data-bs-target="#gameModal">ルール</a> &middot; <a href="#privacy" data-bs-toggle="modal" data-bs-target="#privacyModal">プライバシーポリシー</a></p>
+    <p>&copy; 2021 @nezuu2 and Team member. &middot; <a href="#" data-bs-toggle="modal" data-bs-target="#gameModal"><s>ルール</s></a> &middot; <a href="#privacy" data-bs-toggle="modal" data-bs-target="#privacyModal">プライバシーポリシー</a></p>
     <p>使用したフレームワーク：Bootstrap<br>フレームワークの作者：Mark Otto, Jacob Thornton, と Bootstrapの貢献者</p>
     
     <!-- gameModal -->
@@ -305,14 +305,14 @@
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">閉じる</button>
-            <button type="button" class="btn btn-primary" data-bs-dismiss="modal" onclick="success()">同意する</button>
+            <button type="button" class="btn btn-primary" data-bs-dismiss="modal" onclick="successAlert()">同意する</button>
           </div>
         </div>
       </div>
     </div>
     <!-- Alert(javascript) -->
     <script>
-      function success(){
+      function successAlert(){
         alert("✔ プライバシーポリシーへの同意を確認しました\n🙇ご同意くださりありがとうございます。");
       }
     </script>
