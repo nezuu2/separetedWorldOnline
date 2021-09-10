@@ -97,3 +97,10 @@ body {
 .bg-dark {
   background-color: #492b0e!important;
 }
+.dark-theme {
+  background: rgb(54, 49, 38);
+  color: #ddd
+}
+.bi-moon {
+  color: rgb(179, 97, 255);
+}
