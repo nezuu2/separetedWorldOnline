@@ -13,7 +13,6 @@
     <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/carousel/">
     <!-- Bootstrap-icons CSS -->
     <link rel="stylesheet" href="Library/icons-1.5.0/font/bootstrap-icons.css">
-
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="Library/bootstrap-5.0.0-beta1-dist/css/bootstrap.min.css">
 
@@ -254,8 +253,58 @@
   <!-- FOOTER -->
   <footer class="container">
     <p class="float-end"><a href="#">⇧ページのはじめに戻る</a></p>
-    <p>&copy; 2021 @nezuu2 with Team member. &middot; <a href="#">ルール</a> &middot; <a href="#">プライバシーポリシー</a></p>
+    <p>&copy; 2021 @nezuu2 and Team member. &middot; <a href="#" data-bs-toggle="modal" data-bs-target="#gameModal"><s>ルール</s></a> &middot; <a href="#privacy" data-bs-toggle="modal" data-bs-target="#privacyModal">プライバシーポリシー</a></p>
     <p>使用したフレームワーク：Bootstrap<br>フレームワークの作者：Mark Otto, Jacob Thornton, と Bootstrapの貢献者</p>
+
+    <!-- gameModal -->
+    <div class="modal fade" id="gameModal" tabindex="-1" aria-labelledby="gameModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="gameModalLabel">ゲームルール</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            最新のルールはこちらからご覧いただけます：
+            <br>(できるだけ最新のルールを御覧いただきたいです。)
+            <br><a id="discord2" href="#"></a>
+            <p></p>
+            <img src="Images/ルールのスクショ.png" alt="ゲームルール">
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- privacyModal -->
+    <div class="modal fade" id="privacyModal" tabindex="-1" aria-labelledby="privacyModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="privacyModalLabel">プライバシーポリシー</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            以下本文に記載する「取得した情報」とは、ユーザー様からご入力いただいた
+            <br>メールアドレスやパスワードなどの情報のことを示します。
+            <br>-----------------------------------------------------------------------------------------------------------
+            <br>取得した情報はアカウントのセキュリティ保護やゲームやホームページのパフォーマンス向上にお役立てさせていただき、
+            <br>それ以外での使用は連絡にて許可を頂いた場合をのぞいて一切致しません。
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">閉じる</button>
+            <button type="button" class="btn btn-primary" data-bs-dismiss="modal" onclick="successAlert()">同意する</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Alert(javascript) -->
+    <script>
+      function successAlert(){
+        alert("✔ プライバシーポリシーへの同意を確認しました\n🙇ご同意くださりありがとうございます。");
+      }
+    </script>
   </footer>
 </main>
     <script src="Library/bootstrap-5.0.0-beta1-dist/js/bootstrap.min.js"></script>
