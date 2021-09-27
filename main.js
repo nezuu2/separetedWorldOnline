@@ -16,13 +16,10 @@ btn.addEventListener("change", () => {
   if (btn.checked == true) {
     // ダークモード
     document.body.classList.add("dark-theme");
-    var result = $('.bi, .bi-moon').css( 'bi-moon-fill' );
-    // var result = $('.bi-moon').addClass('bi-moon-fill');
-    // var result = $('.bi-moon').removeClass('bi-moon');
+    document.getElementsById("bi-moon").classList.add("bi-moon-fill");
+    documents.getElementById("text-muted").style.color = "red" ;
   } else {
     // ライトモード
     document.body.classList.remove("dark-theme");
-    // var result = $('.bi-moon-fill').addClass('bi-moon');
-    // var result = $('.bi-moon-fill').removeClass('bi-moon-fill');
   }
 });

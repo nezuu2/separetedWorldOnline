@@ -200,9 +200,21 @@
     <hr class="featurette-divider">
 
     <div class="text-center">
-      <h3 style="font-size:3em;">PV動画</h3>
-      <div class="embed-responsive embed-responsive-16by9">
-        <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/wdSzpf5ccKY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <button class="btn" data-bs-toggle="modal" data-bs-target="#videoModal"><img src="Images/PV動画再生ボタン.png" width=43%; style="border-radius:8%;"></button>
+      <div class="modal fade" id="videoModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+         <div class="modal-content">
+           <div class="modal-header">
+             <h5 class="modal-title" id="videoModal">PV動画</h5>
+             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+           </div>
+           <div class="modal-body">
+             <div class="embed-responsive embed-responsive-16by9">
+             <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/wdSzpf5ccKY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+             </div>
+           </div>
+          </div>
+        </div>
       </div>
     </div>
 
