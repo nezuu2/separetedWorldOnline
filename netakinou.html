@@ -54,7 +54,7 @@
             <a class="nav-link" href="https://w.atwiki.jp/dragon-k/pages/2.html">Wikipedia</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="netakinou.html">ネタ機能</a>
+            <a class="nav-link">ネタ機能</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="creator.html">製作者</a>
@@ -83,7 +83,7 @@
     <div class="row featurette">
       <div class="col-md-7">
         <hr class="featurette-divider">
-        <h2 class="featurette-heading">ネタ機能<span class="text-muted"> (Javascriptで動かしてます。)</span></h2>
+        <h2 class="featurette-heading">ネタ機能 <span class="text-muted fs-1 fst-italic">現在開発中</span></h2>
       </div>
     </div>
     <hr class="featurette-divider">
@@ -97,12 +97,12 @@
       <div class="form-floating mb-3">
         <select class="form-select" id="floatingSelect" aria-label="Floating label select example">
           <option selected>選択してください</option>
-          <option value="1">片手剣士 (One-handed swordsman)</option>
-          <option value="2">両手剣士 (Two-handed swordsman)</option>
-          <option value="3">弓矢使い (Archer)</option>
-          <option value="4">魔法使い (Wizard)</option>
-          <option value="5">武闘家 (Martial artist)</option>
-          <option value="0">無職 (without an occupation)</option>
+          <option value="片手剣士 (One-handed swordsman)">片手剣士 (One-handed swordsman)</option>
+          <option value="両手剣士 (Two-handed swordsman)">両手剣士 (Two-handed swordsman)</option>
+          <option value="弓矢使い (Archer)">弓矢使い (Archer)</option>
+          <option value="魔法使い (Wizard)">魔法使い (Wizard)</option>
+          <option value="武闘家 (Martial artist)">武闘家 (Martial artist)</option>
+          <option value="無職 (without an occupation)">無職 (without an occupation)</option>
         </select>
         <label for="floatingSelect">⚔職業</label>
       </div>
@@ -121,12 +121,12 @@
       <div class="form-floating mb-3">
         <select class="form-select" id="floatingSelect2" aria-label="Floating label select example">
           <option selected>選択してください</option>
-          <option value="0">なし(丸腰)</option>
-          <option value="1">革の装備</option>
-          <option value="2">鉄の装備</option>
-          <option value="3">金の装備</option>
-          <option value="4">ダイヤモンドの装備</option>
-          <option value="5">ひつじの毛</option>
+          <option value="なし(丸腰)">なし(丸腰)</option>
+          <option value="革の装備">革の装備</option>
+          <option value="鉄の装備">鉄の装備</option>
+          <option value="金の装備">金の装備</option>
+          <option value="ダイヤモンドの装備">ダイヤモンドの装備</option>
+          <option value="ひつじの毛">ひつじの毛</option>
         </select>
         <label for="floatingSelect">🦺装備一式</label>
       </div>
@@ -142,7 +142,10 @@
       </div>
       <button type="button" class="btn btn-primary" onclick="showMessage()">作成!</button>
       
-      <br><br><br><div class="bg-primary text-white">イメージ画像</div><img class="img-fluid" width="20%" src="Images/profile-image.png">
+      <br><br>
+      <div id="profile">
+      </div>
+      <br><img class="img-fluid" width="20%" src="Images/profile-image.png">
 
      <hr class="featurette-divider">
   </div><!-- /.container -->
@@ -153,10 +156,10 @@
       console.log("--")
       const textbox = document.getElementById("floatingInput").value
       console.log("MCID: " + textbox);
-      const textbox3 = document.getElementById("floatingSelect").value
-      console.log("職業: " + textbox3);
-      const textbox2 = document.getElementById("floatingFavorite").value
-      console.log("好きなこと: " + textbox2);
+      const textbox2 = document.getElementById("floatingSelect").value
+      console.log("職業: " + textbox2);
+      const textbox3 = document.getElementById("floatingFavorite").value
+      console.log("好きなこと: " + textbox3);
       const textbox4 = document.getElementById("customRange2").value
       console.log("レベル: " + textbox4);
       const textbox5 = document.getElementById("floatingTextarea2").value
@@ -165,6 +168,37 @@
       console.log("装備: " + textbox6);
       const textbox7 = document.getElementById("floatingSelect3").value
       console.log("デザイン: " + textbox7);
+
+      const profile = document.getElementById("profile")
+      // 子要素を削除
+      while(profile.lastChild){
+        profile.removeChild(profile.lastChild);
+      }
+      // 新しいHTML要素を作成
+      var new_element = document.createElement('p');
+      new_element.textContent = 'MCID ' + textbox;
+      // 指定した要素の中の末尾に挿入
+      profile.appendChild(new_element);
+      var new_element2 = document.createElement('p');
+      new_element2.textContent = '職業 ' + textbox2;
+      profile.appendChild(new_element2);
+      var new_element3 = document.createElement('p');
+      new_element3.textContent = '好きなこと ' + textbox3;
+      profile.appendChild(new_element3);
+      var new_element4 = document.createElement('p');
+      new_element4.textContent = 'レベル ' + textbox4;
+      profile.appendChild(new_element4);
+      var new_element5 = document.createElement('p');
+      new_element5.textContent = 'スキル: ' + textbox5;
+      profile.appendChild(new_element5);
+      var new_element6 = document.createElement('p');
+      new_element6.textContent = '装備 ' + textbox6;
+      profile.appendChild(new_element6);
+      
+      var new_element7 = document.createElement('p');
+      var today = new Date();
+      new_element7.textContent = '作成日　' + today.getFullYear() + '/' + (today.getMonth()+1) + '/' + today.getDate();
+      profile.appendChild(new_element7);
     }
   </script>
 
