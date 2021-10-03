@@ -83,7 +83,7 @@
     <div class="row featurette">
       <div class="col-md-7">
         <hr class="featurette-divider">
-        <h2 class="featurette-heading">ネタ機能 <span class="text-muted fs-1 fst-italic">現在開発中</span></h2>
+        <h2 class="featurette-heading">ネタ機能 <span class="text-muted fs-1 fst-italic">現在開発中v1</span></h2>
       </div>
     </div>
     <hr class="featurette-divider">
@@ -133,17 +133,19 @@
       <div class="form-floating mb-3">
         <select class="form-select" id="floatingSelect3" aria-label="Floating label select example">
           <option selected>選択してください</option>
-          <option value="1">Minecraft風</option>
-          <option value="2">SAO風</option>
-          <option value="3">シンプル</option>
-          <option value="4">Twitter風</option>
+          <option value="1">はじまりの街</option>
+          <option value="2">商店街</option>
+          <option value="3">鍛冶屋</option>
+          <option value="4">フィールド</option>
+          <option disabled value="4">coming soon 2層、3層、４層…</option>
+          <option value="5">なし</option>
         </select>
-        <label for="floatingSelect">🎨プロフィールのデザイン</label>
+        <label for="floatingSelect">🎨背景</label>
       </div>
       <button type="button" class="btn btn-primary" onclick="showMessage()">作成!</button>
       
       <br><br>
-      <div id="profile">
+      <div id="profile" style="width: 270px;background-size:cover;">
       </div>
       <br><img class="img-fluid" width="20%" src="Images/profile-image.png">
 
@@ -153,6 +155,7 @@
   <!--Javascriptのソース-->
   <script>
     const showMessage = () => {
+      // textboxに代入ついでにconsoleへ出力
       console.log("--")
       const textbox = document.getElementById("floatingInput").value
       console.log("MCID: " + textbox);
@@ -167,7 +170,7 @@
       const textbox6 = document.getElementById("floatingSelect2").value
       console.log("装備: " + textbox6);
       const textbox7 = document.getElementById("floatingSelect3").value
-      console.log("デザイン: " + textbox7);
+      console.log("背景: " + textbox7);
 
       const profile = document.getElementById("profile")
       // 子要素を削除
@@ -199,6 +202,27 @@
       var today = new Date();
       new_element7.textContent = '作成日　' + today.getFullYear() + '/' + (today.getMonth()+1) + '/' + today.getDate();
       profile.appendChild(new_element7);
+      // 背景
+      if(textbox7 == 1){
+        profile.style.backgroundImage = 'url("Images/はじまりの街.png")';
+        profile.style.color = 'white';
+      }
+      else if(textbox7 == 2){
+        profile.style.backgroundImage = 'url("Images/商店街.png")';
+        profile.style.color = 'white';
+      }
+      else if(textbox7 == 3){
+        profile.style.backgroundImage = 'url("Images/鍛冶屋.png")';
+        profile.style.color = 'green';
+      }
+      else if(textbox7 == 4){
+        profile.style.backgroundImage = 'url("Images/フィールド.png")';
+        profile.style.color = 'white';
+      }
+      else if(textbox7 == 5){
+        profile.style.backgroundImage = '';
+        profile.style.color = 'gray';
+      }
     }
   </script>
 
