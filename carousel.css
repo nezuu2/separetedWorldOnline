@@ -113,3 +113,6 @@ body {
 .bi-moon-fill {
   color: rgb(179, 97, 255);
 }
+.slice:hover {
+  background-color:rgba(22, 80, 22, 0.24);
+}
