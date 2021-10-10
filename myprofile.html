@@ -6,7 +6,7 @@
     <meta name="description" content="SAOをインスパイアしつくった広大な世界で遊べるMinecraftのRPGサーバー、DragonkRPGserverの公式ホームページ。">
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors, and @nezuu2">
     <meta name="generator" content="Hugo 0.79.0">
-    <title>Dragonk RPG server｜ネタ機能</title>
+    <title>Dragonk RPG server｜マイプロ</title>
 
     <link rel="icon" type="image/icon.png" href="server-icon.png">
     <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/carousel/">
@@ -38,7 +38,7 @@
 <header>
   <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#">Dragonk RPG server × ネタ機能</a>
+      <a class="navbar-brand" href="#">Dragonk RPG server × MyPfe</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -54,7 +54,7 @@
             <a class="nav-link" href="https://w.atwiki.jp/dragon-k/pages/2.html">Wikipedia</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link">ネタ機能</a>
+            <a class="nav-link">マイプロフィール</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="creator.html">製作者</a>
@@ -83,7 +83,7 @@
     <div class="row featurette">
       <div class="col-md-7">
         <hr class="featurette-divider">
-        <h2 class="featurette-heading">ネタ機能 <span class="text-muted fs-1 fst-italic">現在開発中v1</span></h2>
+        <h2 class="featurette-heading">My Profile <span class="text-muted fs-1 fst-italic">v2 (現在開発中…)</span></h2>
       </div>
     </div>
     <hr class="featurette-divider">
@@ -153,6 +153,7 @@
   </div><!-- /.container -->
 
   <!--Javascriptのソース-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.js"></script>
   <script>
     const showMessage = () => {
       // textboxに代入ついでにconsoleへ出力
@@ -222,6 +223,23 @@
       else if(textbox7 == 5){
         profile.style.backgroundImage = '';
         profile.style.color = 'gray';
+      }
+      var new_element8 = document.createElement('a');
+      new_element8.textContent = '> Get Ready to Download <';
+      profile.appendChild(new_element8);
+      
+      //ロードされた際の処理として実施：
+      new_element8.onclick = function() {
+        new_element8.innerText = "Download!";
+        //ボタンを押下した際にダウンロードする画像を作る
+        html2canvas(profile,{
+          onrendered: function(canvas){
+            //aタグのhrefにキャプチャ画像のURLを設定
+            var imgData = canvas.toDataURL();
+            new_element8.href = imgData;
+            new_element8.download = 'DK-RPGプロフィール';
+          }
+        });
       }
     }
   </script>
