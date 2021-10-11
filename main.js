@@ -1,3 +1,16 @@
+/* ローディング画面を追加するやつ */
+// window.onload = function() {
+//   var load_element = document.createElement('div');
+//   load_element.id = 'loading';
+//   document.body.appendChild(load_element);
+
+//   var spinner_element = document.createElement('div');
+//   spinner_element.classList.add("spinner");
+//   load_element.appendChild(spinner_element);
+
+//   const spinner = document.getElementById('loading');
+//   spinner.classList.add('loaded');
+// }
 /*document.getElementById('password').innerHTML = "00332255";*/
 /*document.getElementById('password2').innerHTML = "00332255";*/
 
@@ -10,7 +23,6 @@ document.getElementById('discord2').innerHTML = "<mark>申し訳ございませ�
 
 // チェックボックスの取得
 const btn = document.querySelector("#btn-mode");
- 
 // チェックした時の挙動
 btn.addEventListener("change", () => {
   if (btn.checked == true) {
