@@ -23,21 +23,26 @@ $(function(){
             if (e.keyCode === 90) {
                 startf = true;
                 init();
-                draw(con);
+                titleDraw(con);
             }
             return;
         }
     });
 
-    draw(con);
+    titleDraw(con);
 });
 
 function init () {
 }
 
-function draw (con) {
+function BGdraw (con) {
     con.fillStyle = 'black';
-    con.fillRect(0, 0, SCREEN_SX, SCREEN_SY);
+    con.fillRect(0, 0, SCREEN_SX, SCREEN_SY)
+    return
+}
+
+function titleDraw (con) {
+    BGdraw(con);
 
     if (!startf) {
         con.textBaseline = 'alphabetic';
@@ -46,10 +51,22 @@ function draw (con) {
 
         con.font = "48px consolas";
         con.fillText(TITLE, SCREEN_SX / 2, SCREEN_SY / 4);
+        for(i=0;i<10;i++){
+            con.fillText(TITLE, SCREEN_SX / i, SCREEN_SY / 4);
+            sleep(1000);
+        }
 
         con.font = "32px consolas";
         con.fillText('> ' + TEXT_START + ' <', SCREEN_SX / 2, SCREEN_SY / 4 * 3);
 
         return;
     }
+}
+
+// ビジーwaitを使う方法
+function sleep(waitMsec) {
+  var startMsec = new Date();
+ 
+  // 指定ミリ秒間だけループさせる（CPUは常にビジー状態）
+  while (new Date() - startMsec < waitMsec);
 }
