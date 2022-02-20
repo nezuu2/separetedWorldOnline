@@ -36,12 +36,13 @@ btn.addEventListener("change", () => {
   }
 });
 
-const btn = document.querySelector("#btn-mode2");
-btn.addEventListener("change", () => {
-  if (btn.checked == true) {
+const btn2 = document.querySelector("#btn-mode2");
+btn2.addEventListener("change", () => {
+  if (btn2.checked == true) {
     // 付与時
-    
+    document.body.classList.remove("dark-theme");
   } else {
     // 解除時
+    document.body.classList.remove("dark-theme");
   }
 });

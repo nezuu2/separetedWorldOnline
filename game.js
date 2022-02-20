@@ -51,10 +51,10 @@ function titleDraw (con) {
 
         con.font = "48px consolas";
         con.fillText(TITLE, SCREEN_SX / 2, SCREEN_SY / 4);
-        for(i=0;i<10;i++){
-            con.fillText(TITLE, SCREEN_SX / i, SCREEN_SY / 4);
-            sleep(1000);
-        }
+        // for(i=0;i<10;i++){
+        //     con.fillText(TITLE, SCREEN_SX / i, SCREEN_SY / 4);
+        //     sleep(1000);
+        // }
 
         con.font = "32px consolas";
         con.fillText('> ' + TEXT_START + ' <', SCREEN_SX / 2, SCREEN_SY / 4 * 3);
