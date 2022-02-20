@@ -36,13 +36,17 @@ btn.addEventListener("change", () => {
   }
 });
 
-const btn2 = document.querySelector("#btn-mode2");
-btn2.addEventListener("change", () => {
-  if (btn2.checked == true) {
-    // 付与時
-    document.body.classList.remove("dark-theme");
-  } else {
-    // 解除時
-    document.body.classList.remove("dark-theme");
-  }
-});
+// 翻訳
+// const glot = new Glottologist();
+// const h1 = document.querySelector("a");
+// const btn2 = document.querySelector("#btn-mode2");
+// btn2.addEventListener("change", () => {
+//   if (btn2.checked == true) {
+//     // 付与時
+//     glot.t( h1.textContent, 'en' ).then( result => {
+//       h1.textContent = result;
+//     })
+//   } else {
+//     // 解除時
+//   }
+// });
