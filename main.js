@@ -11,6 +11,8 @@
 //   const spinner = document.getElementById('loading');
 //   spinner.classList.add('loaded');
 // }
+
+/*  値代入用のソース */
 /*document.getElementById('password').innerHTML = "00332255";*/
 /*document.getElementById('password2').innerHTML = "00332255";*/
 
@@ -20,6 +22,9 @@ document.getElementById('discord2').innerHTML = "<mark>現在開発中のため�
 /*document.getElementById('discord2').innerHTML = "https://discord.com/channels/836901574076268545/836948443243085885";*/
 /*document.getElementById("discord").href = "https://discord.com/channels/836901574076268545/836948443243085885";*/
 /*document.getElementById("discord2").href = "https://discord.com/channels/836901574076268545/836948443243085885";*/
+
+/*document.getElementById("ip").innerHTML = "nezuu.f5.si:25580";*/
+document.getElementById("ver").innerHTML = "Java版 version 1.18.2　";
 
 // チェックボックスの取得
 const btn = document.querySelector("#btn-mode");

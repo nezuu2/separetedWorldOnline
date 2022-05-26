@@ -1,9 +1,9 @@
 <!doctype html>
 <html lang="jp">
 <head>
-  <title>Dragonk RPG server</title>
+  <title>Separated Wolrd Online</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="SAOをインスパイアしつくった広大な世界で遊べるMinecraftのRPGサーバー、DragonkRPGserverの公式ホームページ。">
+  <meta name="description" content="SAOをインスパイアしつくった広大な世界で遊べるMinecraftのRPGサーバー、SeparatedWorldOnlineの公式ホームページ。">
   <meta name="keywords" content="Dragonk, RPG, server, minecraft"/>
   <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors, and @nezuu2">
   <meta name="generator" content="Hugo 0.79.0">
@@ -39,7 +39,7 @@
 <header>
   <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#"><img src="server-icon.png" width="12%"> Dragonk RPG server</a>
+      <a class="navbar-brand" href="#" style="font-weight:bold;"><img src="server-icon.png" width="12%"> Separated Wolrd Online</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -97,9 +97,10 @@
         <img class="bd-placeholder-img" src="Images/はじまりの街.png">
         <div class="container">
           <div class="carousel-caption text-start">
-            <h1>新感覚RPG、Dragonk-RPG!</h1>
-            <p>さあ、あなたもこの広大なワールドへ冒険に出かけよう！
-              <br>Dragonk RPG serverには、豊富なアイテム、武器、防具、イベント、ギミック、ボスなどがいます。
+            <h1>新感覚RPG! <a style="background:linear-gradient(transparent 70%, #ff0000 0%);">Separeted World Online</a></h1>
+            <p>さあ、あなたもこの広大な分裂した島国のワールドへ冒険に出かけよう！
+              <br>SeparetedWorldOnlineには、豊富なアイテム、武器、防具、イベント、ギミック、ボスなどがいます。
+              <br><section style="margin-top:-15px">※このサーバーはMinecraftServerです。(paperを使用)</section>
             </p>
             <p><button type="button" class="btn btn-lg btn-primary" data-bs-toggle="modal" data-bs-target="#serverModal" role="button">サーバーに参加する</button></p>
           </div>
@@ -109,8 +110,8 @@
         <img class="bd-placeholder-img" src="Images/取引.png">
         <div class="container">
           <div class="carousel-caption">
-            <h1>今なら事前登録で、特別なアイテムが手に入ります！</h1>
-            <p>今すぐ事前登録しよう！</p>
+            <h1>今なら！事前登録で特別なアイテムが手に入ります!</h1>
+            <p>今すぐ事前登録しよう!</p>
             <p><a class="btn btn-lg btn-success" href="#" data-bs-toggle="modal" data-bs-target="#preregistrationModal" role="button">事前登録する</a></p>
           </div>
         </div>
@@ -120,8 +121,8 @@
 
         <div class="container">
           <div class="carousel-caption text-end">
-            <h1>ラズパイで動く<a style="background:linear-gradient(transparent 70%, #FFFF00 0%);">”軽い?”</a>サーバー！</h1>
-            <p>他では味わえないラズパイでできた軽いサーバーです。<br>経費があまりかかってないので気軽に運営できています。</p>
+            <h1>ラズパイで動く<a style="background:linear-gradient(transparent 70%, #FFFF00 0%);">”軽い?”</a>Minecraftサーバー！</h1>
+            <p>他では味わえないラズパイでできた軽いサーバーです。<br>経費がラズパイ以外かかっていないので気軽に運営できています。</p>
             <p><a class="btn btn-lg btn-primary" href="#" data-bs-toggle="modal" data-bs-target="#serverModal" role="button">今すぐ遊ぶ！</a> <a class="btn btn-lg btn-outline-primary" href="creator.html" role="button">開発者について知る</a></p>
           </div>
         </div>
@@ -187,11 +188,11 @@
   <div class="container marketing">
 
     <div calss="row featurette">
-      <h2><a style="font-size:1.2em">現在製作中!</a>｜完成まであと88% <span class="text-muted" style="font-size:0.7em">( 21層まで製作予定 )</span></h2>
+      <h2><a style="font-size:1.2em">現在製作中!</a>｜完成まであと88% <span class="text-muted" style="font-size:0.7em">( 50層まで製作予定 )</span></h2>
       <div class="progress">
         <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="23" aria-valuemin="0" aria-valuemax="100" style="width: 12%">12%</div>
       </div>
-      <h4>ストーリーごと<a style="background:linear-gradient(transparent 70%, #ffff00dc 0%);">リニューアル中</a>です。</h4>
+      <h4>ストーリーごと<a style="background:linear-gradient(transparent 70%, #ffff00dc 0%);">リニューアル中</a>です。<a style="font-size:0.8em">現在3回目()</a></h4>
       <div class="accordion" id="accordionExample">
         <div class="accordion-item">
           <h2 class="accordion-header" id="headingOne">
@@ -219,7 +220,7 @@
           サーバー情報
         </div>
         <div class="card-body">
-          IP nezuu.f5.si:25580, ver 1.18.2
+          IP <a id="ip">~~</a>, ver 1.18.2
         </div>
       </div>
     </div>
@@ -275,7 +276,7 @@
 
     <div class="row featurette">
       <div class="col-md-7 order-md-2">
-        <h2 class="featurette-heading">広大な世界とフィールド<br><span class="text-muted">A vast world and fields</span></h2>
+        <h2 class="featurette-heading">広大な世界とフィールド!<br><span class="text-muted">A vast world and fields</span></h2>
         <p class="lead">あらゆるダンジョンや街がこの世界には散りばめられている!
           <br>どの順番でみつけどのように攻略するかはあなた次第!。
           <br>おまけになんと自分好みの家まで建てられるとか!?
